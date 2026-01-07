@@ -20,7 +20,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Doall"
-include(":app")
 include(":common-ui")
-include(":validations")
-include(":utils")

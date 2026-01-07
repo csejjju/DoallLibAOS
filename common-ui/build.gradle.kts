@@ -1,19 +1,18 @@
 plugins {
     alias(libs.plugins.android.lib)
-    alias(libs.plugins.kotlin.android)
 }
 
 android {
-    namespace = "com.doalltech.lib.common.ui"
+    namespace = "com.doalltech.lib.common_ui"
     compileSdk {
         version = release(36)
     }
 
     defaultConfig {
         minSdk = 25
-        targetSdk = 36
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = "android.support.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -26,19 +25,14 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
-    }
-    kotlinOptions {
-        jvmTarget = "11"
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
 }
 
 dependencies {
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
+    implementation(libs.appcompat.v7)
     testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(libs.runner)
+    androidTestImplementation(libs.espresso.core)
 }
