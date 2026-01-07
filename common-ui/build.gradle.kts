@@ -36,3 +36,5 @@ dependencies {
     androidTestImplementation(libs.runner)
     androidTestImplementation(libs.espresso.core)
 }
+
+group="com.github.csejjju"
