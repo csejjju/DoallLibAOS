@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.doalltech.lib.common_ui"
+    namespace = "com.doalltech.lib.extension"
     compileSdk {
         version = release(36)
     }
